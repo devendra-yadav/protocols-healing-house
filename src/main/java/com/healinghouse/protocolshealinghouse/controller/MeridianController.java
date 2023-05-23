@@ -66,6 +66,7 @@ public class MeridianController {
 	public String showAllMeridians(Model model) {
 		List<Meridian> allMeridians = meridianRepository.findAll();
 		model.addAttribute("meridians", allMeridians);
+		System.out.println(allMeridians.size()+" total size");
 		
 		return "meridian/all_meridians";
 	}
