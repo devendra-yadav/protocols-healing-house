@@ -1,5 +1,6 @@
 package com.healinghouse.protocolshealinghouse.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -37,6 +38,7 @@ public class Point {
 	private String notes;
 	
 	@Lob
+	@Column(columnDefinition = "MEDIUMBLOB")
 	private byte[] image;
 	
 }
